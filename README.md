@@ -28,7 +28,7 @@ En el modal se puede:
 
 cargar nombre, stock, nota, sacar una foto (cámara)
 
-# Confirmación al borrar
+## Confirmación al borrar
 Se utiliza Alert.alert() para pedir confirmación al usuario antes de eliminar un producto, mejorando la experiencia y evitando errores involuntarios.
 
 En Ajustes:
