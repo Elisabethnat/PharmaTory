@@ -1,27 +1,48 @@
-# PharmaTory 
+# PharmaTory App
 
-PharmaTory es una aplicación mobile de inventario de medicamentos, desarrollada con Expo y React Native.
+App mobile tipo ecommerce/inventario (farmacia) hecha con React Native + Expo Router.
+Permite gestionar productos con persistencia offline (SQLite) y sincronización con Firebase.
 
-##  Descripción
+## Funcionalidades
+- Listado de productos (FlatList)
+- Alta / edición / borrado (modal)
+- Foto de producto (Cámara con Expo Image Picker)
+- Persistencia local offline con SQLite
+- Autenticación con Firebase Auth (Email/Password)
+- Sincronización con Firebase Realtime Database (subir / traer)
 
-La app permite:
+## Tecnologías usadas
+- Expo + React Native
+- Expo Router (navegación)
+- Redux Toolkit (manejo de estado)
+- Expo SQLite (persistencia offline)
+- Firebase (Auth + Realtime Database)
+- Expo Image Picker (cámara)
 
-- Registrar medicamentos disponibles.
-- Ver rápidamente qué medicamentos hay en stock y cuáles faltan.
-- Buscar medicamentos por nombre y/o categoría.
-- Facilitar el control de inventario en una farmacia o botiquín organizado.
+### Uso
 
-Este proyecto forma parte de mi formación en desarrollo mobile y se encuentra en desarrollo activo.
+En la pestaña Home se ve el inventario.
+Botón + Agregar abre el modal para crear un producto.
+En el modal se puede:
 
-## Tecnologías
+cargar nombre, stock, nota, sacar una foto (cámara)
 
-- React Native
-- Expo
-- JavaScript 
+# Confirmación al borrar
+Se utiliza Alert.alert() para pedir confirmación al usuario antes de eliminar un producto, mejorando la experiencia y evitando errores involuntarios.
 
-## 🚀 Cómo ejecutar el proyecto
+En Ajustes:
 
+Registrar/Login con email y contraseña,
+Subir a Firebase / Traer de Firebase (cuando el usuario está logueado)
 
-npm install
-npx expo start
+Firebase
 
+Se usa Firebase Auth (Email/Password).
+Se usa Realtime Database para guardar el inventario por usuario.
+
+Persistencia offline (SQLite)
+
+Los productos se guardan en la DB local pharmatory.db.
+
+Nota
+En desarrollo se puede usar npx expo start -c si hay cache viejo.
