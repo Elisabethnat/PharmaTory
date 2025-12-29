@@ -1,3 +1,4 @@
+# PharmaTory
 # PharmaTory App
 
 App mobile tipo ecommerce/inventario (farmacia) hecha con React Native + Expo Router.
